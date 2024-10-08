@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="bootstrap 5, premium, multipurpose, sass, scss, saas, rtl, business, consulting, accounting">
+    <meta name="description" content="Consulting Finance Accounting HTML5 Template">
+    <meta name="author" content="www.themeht.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Conocimiento infotech- Consulting Finance Accounting + RTL Support</title>
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- inject css start -->
+
+    <!--== bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!--== animate -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--== fontawesome -->
+    <link href="css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!--== magnific-popup -->
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!--== owl.carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+    <!--== lightslider -->
+    <link href="css/lightslider.min.css" rel="stylesheet" type="text/css">
+
+    <!--== spacing -->
+    <link href="css/spacing.css" rel="stylesheet" type="text/css">
+
+    <!--== base -->
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+
+    <!--== shortcodes -->
+    <link href="css/shortcodes.css" rel="stylesheet" type="text/css">
+
+    <!--== style -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!--== responsive -->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+    <!--== color-customizer -->
+    <link href="#" data-style="styles" rel="stylesheet">
+    <link href="css/color-customizer.css" rel="stylesheet" type="text/css">
+
+    <!-- inject css end -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+
+    <style>
+        * {
+            user-select: none;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --font: "Sofia", sans-serif;
+            --font-size: 16px;
+            --blue: #0a4870;
+            --blue2: #e3ebf1;
+            --black: #000;
+            --grey: #7d7d7d;
+            --grey2: #f0f0f0;
+            --grey3: #e8e7e7;
+            --grey4: #fdfdfd;
+            --bluegrey: #49606e;
+            --orange: #ec992c;
+        }
+
+
+        .banner-section {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(90deg, #0d092c, transparent), url('images/banner-electrician2.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+            user-select: none;
+        }
+
+        .banner-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin-left: 70px;
+            padding: 20px;
+        }
+
+
+        .banner-title h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .banner-subtitle {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            line-height: 1.8;
+        }
+
+
+        .banner-subtitle strong {
+            color: #ffdf00;
+        }
+
+        .service-button a {
+            text-decoration: none;
+        }
+
+        .service-button a button {
+            background-color: #3143ef;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.4s ease, transform 0.2s ease;
+        }
+
+        .service-button a button:hover {
+            background-color: #2536b4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .banner-content {
+                margin-left: 0;
+
+            }
+
+            .banner-title h2 {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+
+            .banner-subtitle {
+                font-size: 16px;
+            }
+
+            .service-button a button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        /* For extra small devices (phones) */
+        @media (max-width: 480px) {
+            .banner-section {
+                height: auto;
+                /* Allow flexible height */
+                padding: 60px 10px;
+            }
+
+            .banner-title h2 {
+                font-size: 1.8em;
+                letter-spacing: 0.5px;
+            }
+
+            .banner-subtitle {
+                font-size: 13px;
+            }
+
+            .service-button a button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Ultra-wide screens (larger desktops) */
+        @media (min-width: 1200px) {
+            .banner-title h2 {
+                font-size: 3.2em;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+            }
+
+            .service-button a button {
+                padding: 18px 35px;
+                font-size: 1.3em;
+            }
+        }
+
+
+        .service-card {
+            margin-bottom: 80px;
+        }
+
+        .booking-card {
+            border-radius: 10px;
+            height: 450px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .booking-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 72, 112, 0);
+            transition: 0.3s;
+        }
+
+        .booking-card .book-container .content {
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            transform: translateY(-200px);
+            transition: 0.3s;
+        }
+
+        .booking-card .informations-container {
+            padding: 20px;
+            background: var(--grey2);
+            transform: translateY(340px);
+            transition: 0.3s;
+        }
+
+        .booking-card .informations-container .more-information {
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .booking-card .informations-container .more-information .staff_rating .fa-solid {
+            margin-top: 10px;
+            color: gold;
+        }
+
+        .booking-card .informations-container .more-information .info-and-date-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .booking-card .informations-container .more-information .info-and-date-container .box {
+            flex: 1 1 calc(50% - 20px);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-sizing: border-box;
+        }
+
+        .booking-card .informations-container .more-information .info-and-date-container .box.info {
+            color: var(--orange);
+            margin-right: 10px;
+        }
+
+        .booking-card .informations-container .more-information .disclaimer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: var(--grey);
+        }
+
+        .booking-card:hover::before {
+            background: rgba(10, 72, 112, 0.6);
+        }
+
+        .booking-card:hover .book-container .content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .booking-card:hover .informations-container {
+            transform: translateY(0);
+        }
+
+        .booking-card:hover .informations-container .more-information {
+            opacity: 1;
+        }
+
+        h2 {
+            color: var(--blue);
+            font-weight: 500;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul .booking-card {
+            position: relative;
+            width: 300px;
+            display: flex;
+            flex: 0 0 300px;
+            flex-direction: column;
+            margin: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            color: var(--blue);
+            transition: 0.3s;
+        }
+
+        ul .booking-card .book-container {
+            height: 200px;
+        }
+
+        ul .booking-card .book-container .content .btn {
+            border: 3px solid white;
+            padding: 10px 15px;
+            background: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        ul .booking-card .book-container .content .btn:hover {
+            background: white;
+            border: 0 solid white;
+            color: var(--blue);
+        }
+
+        ul .booking-card .informations-container .title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        ul .booking-card .informations-container .title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            width: 50px;
+            margin: auto;
+            background: var(--blue);
+        }
+
+        ul .booking-card .price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        ul .booking-card .price .icon {
+            margin-right: 10px;
+        }
+
+        .credits {
+            display: table;
+            background: var(--blue);
+            color: white;
+            line-height: 25px;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .credits a {
+            color: var(--blue2);
+        }
+
+        h1 {
+            margin: 10px 20px;
+            font-size: 1.8em;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 9999;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form-container h1 {
+            color: #3143ef;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .user-name,
+        .user-email,
+        .user-mobile,
+        .user-address {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        .service-problem {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            margin: 20px 0px 20px 0;
+        }
+
+        .user-select {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .serviceprovider,
+        .servicetype,
+        .servicedate-start,
+        .servicedate-end {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 12px;
+            padding-right: 30px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .form-container button {
+            background-color: #3143ef;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fd5b03;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #3143ef;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fd5b03;
+        }
+
+
+        /* Fade-in animation for form appearance */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .form-container {
+                transform: scale(0.9);
+                /* Shrinks the form to 90% of its size */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .form-container {
+                transform: scale(0.8);
+                /* Shrinks the form to 80% of its size */
+            }
+
+            .form-container h1 {
+                font-size: 28px;
+                /* Optional: reduce font size of heading */
+            }
+        }
+
+        .flatpickr-calendar .flatpickr-monthDropdown-months {
+            display: inline-block !important;
+            z-index: 99999;
+            position: relative;
+        }
+
+        .flatpickr-monthDropdown-months select {
+            appearance: auto !important;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .blocked-date {
+            background-color: red !important;
+            color: white !important;
+        }
+
+        #service-list {
+            display: block;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <!-- page wrapper start -->
+
+    <div class="page-wrapper">
+        <!--Header start-->
+        <header id="site-header" class="header header-3">
+            <div class="header-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-center justify-content-between">
+                            <a class="navbar-brand logo" href="index.html">
+                                <img id="logo-img" class="img-fluid" src="images/conocimientologo.png" alt="">
+                            </a>
+                            <a class="btn btn-theme d-none d-sm-block" href="#theme-bg"><span>Request A
+                                    Quote</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Navbar -->
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavDropdown" aria-expanded="false"
+                                    aria-label="Toggle navigation"> <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <!-- Home -->
+                                        <li class="nav-item dropdown"> <a class="nav-link active"
+                                                href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item dropdown"> <a class="nav-link " href="#"
+                                                data-bs-toggle="dropdown">About Us</a>
+                                            <div class="dropdown-menu">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">About Our Company</a>
+                                                    </li>
+                                                    <li><a href="#">Our History</a>
+                                                    </li>
+                                                    <li><a href="#">Mission &amp; Values</a>
+                                                    </li>
+                                                    <li><a href="#">Career</a>
+                                                    </li>
+                                                    <li><a href="#">Career Single</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#"
+                                                data-bs-toggle="dropdown">Services</a>
+                                            <div class="dropdown-menu">
+                                                <ul class="list-unstyled">
+                                                    <li class="dropdown dropdown-submenu"> <a href="#"
+                                                            class="dropdown-toggle" data-bs-toggle="dropdown">
+                                                            Normal Services
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="electrician.html">Electrician</a>
+                                                            </li>
+                                                            <li><a href="#">Plumber</a>
+                                                            </li>
+                                                            <li><a href="#">AC Technician</a>
+                                                            </li>
+                                                            <li><a href="#">Gardener</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown dropdown-submenu"> <a href="#"
+                                                            class="dropdown-toggle" data-bs-toggle="dropdown">
+                                                            Contract Services
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="nurse.html">Nurse</a>
+                                                            </li>
+                                                            <li><a href="#">Babysitter</a>
+                                                            </li>
+                                                            <li><a href="#">Security guard</a>
+                                                            </li>
+                                                            <li><a href="#">Maid</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown"> <a class="nav-link "
+                                                href="contactus.html">Contact
+                                                Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="right-nav align-items-center d-flex justify-content-end">
+                                    <div class="search-icon me-1 me-sm-3">
+                                        <a id="search" href="javascript:void(0)"><i class="flaticon-search"></i></a>
+                                    </div>
+                                    <div>
+                                        <!-- <div class="cart"> <a href="#" id="header-cart-btn">
+                                                <span class="cart-badge">2</span> <i
+                                                    class="flaticon-shopping-cart"></i></a>
+                                            <ul class="cart-list">
+                                                <li>
+                                                    <a href="#" class="image">
+                                                        <img src="images/01.jpg" class="img-fluid cart-thumb" alt="">
+                                                    </a>
+                                                    <div class="cart-item-desc">
+                                                        <h6><a href="#">Women's Fashion</a></h6>
+                                                        <p>1x - <span class="price">$132</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="image">
+                                                        <img src="images/02.jpg" class="img-fluid cart-thumb" alt="">
+                                                    </a>
+                                                    <div class="cart-item-desc">
+                                                        <h6><a href="#">Goggles</a></h6>
+                                                        <p>1x - <span class="price">$28</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="total text-end"> <span class="d-block">Total: $160.00</span>
+                                                </li>
+                                                <li><a href="product-cart.html" class="btn">Cart</a>
+                                                    <a href="product-checkout.html" class="btn btn-border">Checkout</a>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <style>
+                                        .profile-icon {
+                                            position: relative;
+                                            display: inline-block;
+                                        }
+
+                                        .dropdown-content {
+                                            display: none;
+                                            position: absolute;
+                                            background-color: #0d092c;
+                                            min-width: 160px;
+                                            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                            border-radius: 6px;
+                                            /* z-index: 1; */
+                                            right: 0;
+                                            /* Align dropdown to the right */
+                                        }
+
+                                        .dropdown-content a {
+                                            color: #ffffff;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+
+                                        .dropdown-content a:after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            width: 0;
+                                            height: 1px;
+                                            bottom: 0.5%;
+                                            background-color: #ffffff;
+                                            transition: width 0.3s ease;
+                                        }
+
+                                        .dropdown-content a:hover {
+                                            color: aliceblue;
+                                            cursor: pointer;
+                                            transform: scale(1.08);
+                                        }
+
+                                        .dropdown-content a:hover:after {
+                                            width: 80%;
+                                        }
+
+                                        .profile-icon:hover .dropdown-content {
+                                            display: block;
+                                        }
+                                    </style>
+                                    <div class="profile-icon">
+
+                                        <a href="registration_login.html" id="profile-icon"><i
+                                                class="fa-solid fa-user"></i></a>
+
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-input" id="search-input-box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search Here"
+                        style="background-color: white; color: black; padding: 10px;">
+                    <button type="submit" class="btn"></button> <span class="flaticon-close" id="close-search"
+                        title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+        <!--Header End-->
+
+
+        <!--service page start-->
+        <div class="banner-section">
+            <div class="banner-content">
+                <div class="banner-title">
+                    <h2>Expert Electrical Solutions for Your Home & Business</h2>
+                </div>
+                <div class="banner-subtitle">
+                    Reliable, Affordable, and Safe Electrical Services. Powering your needs with professional expertise
+                    and 24/7 support. From installations to repairs, we've got you covered!<br><strong>Book Now & Get a
+                        Free Consultation!</strong>
+                </div>
+                <div class="service-button">
+                    <a href="#serviceheader">
+                        <button>See Our Services</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-header" id="serviceheader">
+            <h3 class="text-center mb-4 mt-5" style="color: #3143ef; text-transform: uppercase; font-weight: 600;">
+                Electrical Services
+            </h3>
+        </div>
+        <div class="service-card" id="service-card">
+            <ul style="display:flex; align-items:center; justify-content:center;">
+                <li class="booking-card" style="background-image: url('images/wiring.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Wiring and Rewiring</h2>
+                        <p class="sub-title">Involves installing or replacing
+                            electrical wires to ensure safe and efficient power distribution throughout the
+                            home.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/light.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn" name="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Lighting Solutions (Indoor/Outdoor)</h2>
+                        <p class="sub-title">Involves designing and installing efficient lighting systems for both
+                            indoor and outdoor spaces, enhancing aesthetics and functionality.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/celling fan.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Ceiling Fan Installation</h2>
+                        <p class="sub-title">Involves the installation of ceiling fans to improve air circulation,
+                            reduce energy costs, and enhance comfort in homes or offices.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/outlet.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Outlet and Switch Installation</h2>
+                        <p class="sub-title">IInvolves installing or upgrading electrical outlets and switches to
+                            provide safe and convenient access to power throughout the home or business.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/backup.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Backup Generator Installation</h2>
+                        <p class="sub-title">Involves installing backup generators to provide uninterrupted power during
+                            outages and performing regular maintenance for optimal performance.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/home automation.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Home Automation Setup</h2>
+                        <p class="sub-title">Involves installing and configuring smart devices like lights, thermostats,
+                            and security systems for a more convenient and energy-efficient home.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/commarcial.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Commercial Electrical Solutions</h2>
+                        <p class="sub-title">Involves providing electrical installations, repairs, and maintenance
+                            services for businesses to ensure smooth operations and safety compliance.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card" style="background-image: url('images/solar system.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Solar Power System Installations</h2>
+                        <p class="sub-title">Involves installing solar panels and related systems to provide renewable
+                            energy, reduce electricity bills, and promote environmental sustainability.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--service page end-->
+
+        <!--form popup start-->
+
+        <div class="overlay hidden" id="form_overlay">
+            <div class="form-container" id="form_hidden">
+                <span class="close" id="close_form">&times;</span>
+                <h1 style="font-size: 35px;">Book Your Appointment</h1>
+                <form action="electrician.html" id="bookingapplicationform" name="bookingapplicationform" method="POST">
+                    <div class="user-details">
+                        <div class="user-name">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="" required>
+                        </div>
+
+                        <div class="user-email">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="" required>
+                        </div>
+
+                        <div class="user-mobile">
+                            <label for="mobile_no">Mobile No:</label>
+                            <input type="tel" id="mobile_no" name="mobile_no" value="" required>
+                        </div>
+
+                        <div class="user-address">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                    </div>
+
+                    <div class="user-select">
+                        <div class="serviceprovider" id="serviceprovider">
+                            <label for="serviceprovider">Service Provider:</label>
+                            <select id="serviceprovider-list" name="serviceprovider-list">
+                                <option value="" disabled selected>Select Service Provider</option>
+                                <option value="Electrician">Electrician</option>
+                            </select>
+                        </div>
+
+                        <div class="servicetype" id="servicetype">
+                            <label for="servicetype">Service Type:</label>
+                            <select id="servicetype-list" name="servicetype" required>
+                                <option value="" disabled selected>Select Service Type</option>
+                                <option value="Wiring and Rewiring">Wiring and Rewiring</option>
+                                <option value="Lighting Solutions">Lighting Solutions</option>
+                                <option value="Ceiling Fan Installation">Ceiling Fan Installation</option>
+                                <option value="Outlet and Switch Installation">Outlet and Switch Installation</option>
+                                <option value="Backup Generator Installation">Backup Generator Installation</option>
+                                <option value="Home Automation Setup">Home Automation Setup</option>
+                                <option value="Commercial Electrical Solutions">Commercial Electrical Solutions</option>
+                                <option value="Solar Power System Installations">Solar Power System Installations
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="servicedate-start">
+                            <label for="start-date">Start Date:</label>
+                            <input type="date" name="start-date" id="start-date" autocomplete="off" required>
+                        </div>
+
+                        <div class="servicedate-end">
+                            <label for="end-date">End Date:</label>
+                            <input type="date" name="end-date" id="end-date" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="service-problem">
+                        <label for="problem">Service requirement:</label>
+                        <textarea style="outline:none; color:#3143ef" id="servicerequirement" name="servicerequirement"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--form popup end-->
+
+
+
+        <!--footer start-->
+
+        <footer class="footer">
+            <div class="primary-footer dark-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                            <h4 class="mb-4 text-white">Our Services</h4>
+                            <div class="footer-list">
+                                <ul class="list-unstyled" id="service-list">
+                                    <li><a href="electrician.html">Electrician</a>
+                                    </li>
+                                    <li><a href="#">Plumber</a>
+                                    </li>
+                                    <li> <a href="#">AC Technician</a>
+                                    </li>
+                                    <li> <a href="#">Gardener</a>
+                                    </li>
+                                    <li> <a href="nurse.html">Nurse</a>
+                                    </li>
+                                    <li> <a href="#">Babysitter </a>
+                                    </li>
+                                    <li> <a href="#"> Security guard</a>
+                                    </li>
+                                    <li> <a href="#">Maid</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                            <h4 class="mb-4 text-white">NewsLetter</h4>
+                            <p>Get started for 1 Month free trial No Purchace required.</p>
+                            <div class="subscribe-form">
+                                <form id="mc-form" class="group">
+                                    <input value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address"
+                                        required="" type="email">
+                                    <input class="btn btn-theme" name="subscribe" value="Subscribe" type="submit">
+                                </form>
+                            </div>
+                            <div class="social-icons social-colored mt-5">
+                                <ul class="list-inline">
+                                    <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="social-dribbble"><a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </li>
+                                    <li class="social-skype"><a href="#"><i class="fab fa-skype"></i></a>
+                                    </li>
+                                    <li class="social-linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 ms-auto col-md-12 mt-5 mt-lg-0">
+                            <h4 class="mb-4 text-white">About Consulterz</h4>
+                            <p class="mb-3">Consulterz - Business Consulting HTML5 Template Is fully Responsive,
+                                Creative, Modern HTML5 Template.</p>
+                            <div class="footer-cntct">
+                                <ul class="media-icon list-unstyled">
+                                    <li>
+                                        <p class="mb-0"><i class="flaticon-paper-plane"></i> 423B, Road Wordwide
+                                            Country, USA</p>
+                                    </li>
+                                    <li><i class="flaticon-email"></i> <a
+                                            href="mailto:themeht23@gmail.com">themeht23@gmail.com</a>
+                                    </li>
+                                    <li><i class="flaticon-phone"></i> <a href="tel:+912345678900">+91-234-567-8900</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secondary-footer theme-bg">
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-lg-6"> <span>Copyright 2019 Consulterz Theme by <u><a
+                                            href="#">ThemeHt</a></u> | All
+                                    Rights Reserved</span>
+                            </div>
+                            <div class="col-lg-6 text-lg-end footer-list md-mt-2">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item mb-0"><a href="about-our-company.html">About Us</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="team.html">Team</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="contact.html">Contact Us</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="privacy-policy.html">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="terms-and-conditions.html">Terms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--footer end-->
+
+        <!--back-to-top start-->
+
+        <div class="scroll-top"><a class="smoothscroll" href="#top"><i class="flaticon-top"></i></a></div>
+
+        <!--back-to-top end-->
+
+        <!-- inject js start -->
+
+        <!--== jquery -->
+        <script src="js/theme.js"></script>
+
+        <!--== theme-plugin -->
+        <script src="js/theme-plugin.js"></script>
+
+        <!--== color-customize -->
+        <script src="js/color-customizer.js"></script>
+
+        <!--== theme-script -->
+        <script src="js/theme-script.js"></script>
+
+        <!-- inject js end -->
+
+    </div>
+    <!-- page wrapper end-->
+
+    <script>
+
+        // Helper function to check if a date is within the blocked range
+        function isBlockedDate(dateStr) {
+            return blockedDates.some(block => {
+                const startDate = new Date(block.start);
+                const endDate = new Date(block.end);
+                const currentDate = new Date(dateStr);
+
+                // Ensure the date is within the range from start to end (inclusive)
+                return currentDate >= startDate && currentDate <= endDate;
+            });
+        }
+
+        // Function to initialize flatpickr and block date ranges
+        function initializeFlatpickr(selector) {
+            flatpickr(selector, {
+                dateFormat: "Y-m-d",
+                disable: blockedDates.map(d => ({ from: d.start, to: d.end })),  // Disable blocked date ranges
+                onDayCreate: function (dObj, dStr, fp, dayElem) {
+                    const dateStr = dayElem.dateObj.toISOString().slice(0, 10); // Format date as YYYY-MM-DD
+
+                    // Apply color to the entire range of blocked dates
+                    if (isBlockedDate(dateStr)) {
+                        dayElem.style.backgroundColor = "red"; // Apply red background
+                        dayElem.style.color = "white"; // Apply white text color
+                    }
+                },
+                monthSelectorType: "dropdown" // Optional: for month dropdown
+            });
+        }
+
+        // Initialize flatpickr for both start-date and end-date fields
+        initializeFlatpickr("#start-date");
+        initializeFlatpickr("#end-date");
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const bookButtons = document.querySelectorAll('.btn');
+            const overlay = document.getElementById('form_overlay');
+            const closeBtn = document.getElementById('close_form');
+            const form = document.getElementById("bookingapplicationform");
+
+            bookButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    overlay.classList.remove('hidden');
+                });
+            });
+
+            // Close the form when clicking on the close button
+            closeBtn.addEventListener('click', function () {
+                overlay.classList.add('hidden');
+                form.reset();
+            });
+
+            // Close the form when clicking outside of it (optional)
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) {
+                    overlay.classList.add('hidden');
+                    form.reset();
+                }
+            });
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>

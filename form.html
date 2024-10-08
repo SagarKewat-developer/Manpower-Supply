@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000000;
+        }
+
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 10000000;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .form-container h1 {
+            color: #3143ef;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .user-name,
+        .user-email,
+        .user-mobile,
+        .user-address {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        .service-problem {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            margin: 20px 0px 20px 0;
+        }
+
+        .user-select {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .serviceprovider,
+        .servicetype,
+        .servicedate-start,
+        .servicedate-end {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 12px;
+            padding-right: 30px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .form-container button {
+            background-color: #3143ef;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fd5b03;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .calendarPopup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000000;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .calendarPopupforend {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000000;
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .calendar {
+            width: 100%;
+        }
+
+        .header_section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .header_section h1 {
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        .prevBtn,
+        .nextBtn {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .prevBtn:hover,
+        .nextBtn:hover {
+            background-color: #45a049;
+        }
+
+        /* Weekday Styles */
+        .weekdays {
+            display: flex;
+            justify-content: space-between;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+
+        .weekdays .day {
+            width: calc(100% / 7);
+            text-align: center;
+        }
+
+        /* Days Styles */
+        .days {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .day {
+            user-select: none;
+            width: calc(100% / 7);
+            height: 40px;
+            line-height: 40px;
+            margin-bottom: 5px;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .day.empty {
+            visibility: hidden;
+        }
+
+        .day:hover {
+            background-color: #f0f0f0;
+        }
+
+        .day.selected {
+            background-color: #3143ef;
+            color: white;
+        }
+
+        .disabled {
+            background-color: rgb(235, 52, 52);
+            /* Light gray background */
+            color: #ccc;
+            /* Gray text color */
+            pointer-events: none;
+            /* Prevent user interaction */
+            cursor: not-allowed;
+            /* Not allowed cursor */
+        }
+
+        /* Close Button */
+        .closeBtn {
+            user-select: none;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .closeBtn:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="overlay hidden" id="form_overlay">
+        <div class="form-container" id="form_hidden">
+            <span class="close" id="close_form">&times;</span>
+            <h1 style="font-size: 35px;">Book Your Appointment</h1>
+            <form action="electrician.php" id="bookingapplicationform" name="bookingapplicationform" method="POST">
+                <div class="user-details">
+                    <div class="user-name">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" value="" required>
+                    </div>
+
+                    <div class="user-email">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" value="" required>
+                    </div>
+
+                    <div class="user-mobile">
+                        <label for="mobile_no">Mobile No:</label>
+                        <input type="tel" id="mobile_no" name="mobile_no" value="" required>
+                    </div>
+
+                    <div class="user-address">
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                </div>
+
+                <div class="service-problem">
+                    <label for="problem">Service requirement:</label>
+                    <textarea style="outline:none; color:#3143ef" id="servicerequirement" name="servicerequirement"
+                        required></textarea>
+                </div>
+
+                <div class="user-select">
+                    <div class="serviceprovider" id="serviceprovider">
+                        <label for="serviceprovider">Service Provider:</label>
+                        <select id="serviceprovider-list" name="serviceprovider-list">
+                            <option value="" disabled selected>Select Service Provider</option>
+                            <option value="Electrician">Electrician</option>
+                        </select>
+                    </div>
+
+                    <div class="servicetype" id="servicetype">
+                        <label for="servicetype">Service Type:</label>
+                        <select id="servicetype-list" name="servicetype-list">
+                            <option value="" disabled selected>Select Service Type</option>
+                            <option value="Wiring and Rewiring">Wiring and Rewiring</option>
+                            <option value="Lighting Solutions (Indoor/Outdoor)">Lighting Solutions (Indoor/Outdoor)
+                            </option>
+                            <option value="Ceiling Fan Installation">Ceiling Fan Installation</option>
+                            <option value="Outlet and Switch Installation">Outlet and Switch Installation</option>
+                            <option value="Backup Generator Installation">Backup Generator Installation</option>
+                            <option value="Home Automation Setup">Home Automation Setup</option>
+                            <option value="Commercial Electrical Solutions">Commercial Electrical Solutions</option>
+                            <option value="Solar Power System Installations">Solar Power System Installations</option>
+                        </select>
+                    </div>
+
+                    <!-- Start Date with Calendar Icon -->
+                    <div class="servicedate-start">
+                        <label for="start-date-icon">Start Date:</label>
+                        <!-- Calendar Icon -->
+                        <i id="start-date-icon" class="calendar-icon" onclick="openCalendar('start-date')">&#128197;</i>
+                        <!-- Unicode calendar icon -->
+
+                        <!-- Hidden input to store the selected start date -->
+                        <input type="hidden" name="start-date" id="start-date">
+
+                        <!-- Placeholder for displaying the selected start date -->
+                        <span id="start-date-placeholder" class="date-placeholder">Select Start Date</span>
+                    </div>
+
+                    <!-- End Date with Calendar Icon -->
+                    <div class="servicedate-end">
+                        <label for="end-date-icon">End Date:</label>
+                        <!-- Calendar Icon -->
+                        <i id="end-date-icon" class="calendar-icon" onclick="openCalendar('end-date')">&#128197;</i>
+                        <!-- Unicode calendar icon -->
+
+                        <!-- Hidden input to store the selected end date -->
+                        <input type="hidden" name="end-date" id="end-date">
+
+                        <!-- Placeholder for displaying the selected end date -->
+                        <span id="end-date-placeholder" class="date-placeholder">Select End Date</span>
+                    </div>
+
+                </div>
+
+
+
+                <div class="calendarPopup hidden">
+                    <div class="calendar">
+                        <div class="close" id="close_calendar"
+                            style="position:absolute;right:10px;font-size:20px;cursor: pointer; user-select:none;">
+                            &times;
+                        </div>
+                        <div class="header_section">
+                            <button class="prevBtn">Prev</button>
+                            <h1 id="monthYear"></h1>
+                            <button class="nextBtn">Next</button>
+                        </div>
+                        <div class="weekdays">
+                            <div class="day">Sun</div>
+                            <div class="day">Mon</div>
+                            <div class="day">Tue</div>
+                            <div class="day">Wed</div>
+                            <div class="day">Thu</div>
+                            <div class="day">Fri</div>
+                            <div class="day">Sat</div>
+                        </div>
+                        <div class="days" id="days"></div>
+                    </div>
+                    <button type="button" class="selectbtn" id="selecbtn">Select</button>
+                </div>
+
+                <div class="calendarPopupforend hidden">
+                    <div class="calendar">
+                        <div class="close" id="close_calendarforend"
+                            style="position:absolute;right:10px;font-size:20px;cursor: pointer; user-select:none;">
+                            &times;
+                        </div>
+                        <div class="header_section">
+                            <button class="prevBtn">Prev</button>
+                            <h1 id="monthYearforend"></h1>
+                            <button class="nextBtn">Next</button>
+                        </div>
+                        <div class="weekdays">
+                            <div class="day">Sun</div>
+                            <div class="day">Mon</div>
+                            <div class="day">Tue</div>
+                            <div class="day">Wed</div>
+                            <div class="day">Thu</div>
+                            <div class="day">Fri</div>
+                            <div class="day">Sat</div>
+                        </div>
+                        <div class="days" id="daysforend"></div>
+                    </div>
+                    <button type="button" class="selectbtn" id="selecbtnforend">Select</button>
+                </div>
+
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+
+
+
+</html>

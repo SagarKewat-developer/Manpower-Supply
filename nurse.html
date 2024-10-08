@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="bootstrap 5, premium, multipurpose, sass, scss, saas, rtl, business, consulting, accounting">
+    <meta name="description" content="Consulting Finance Accounting HTML5 Template">
+    <meta name="author" content="www.themeht.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Conocimiento infotech- Consulting Finance Accounting + RTL Support</title>
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- inject css start -->
+
+    <!--== bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!--== animate -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--== fontawesome -->
+    <link href="css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!--== magnific-popup -->
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!--== owl.carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+    <!--== lightslider -->
+    <link href="css/lightslider.min.css" rel="stylesheet" type="text/css">
+
+    <!--== spacing -->
+    <link href="css/spacing.css" rel="stylesheet" type="text/css">
+
+    <!--== base -->
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+
+    <!--== shortcodes -->
+    <link href="css/shortcodes.css" rel="stylesheet" type="text/css">
+
+    <!--== style -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!--== responsive -->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+    <!--== color-customizer -->
+    <link href="#" data-style="styles" rel="stylesheet">
+    <link href="css/color-customizer.css" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <!-- inject css end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --font: "Sofia", sans-serif;
+            --font-size: 16px;
+            --blue: #0a4870;
+            --blue2: #e3ebf1;
+            --black: #000;
+            --grey: #7d7d7d;
+            --grey2: #f0f0f0;
+            --grey3: #e8e7e7;
+            --grey4: #fdfdfd;
+            --bluegrey: #49606e;
+            --orange: #ec992c;
+        }
+
+
+        .banner-section {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(90deg, #0d092c, transparent), url('images/Nurse.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: relative;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+            user-select: none;
+        }
+
+        .banner-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin-left: 70px;
+            padding: 20px;
+        }
+
+
+        .banner-title h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff;
+
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .banner-subtitle {
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            line-height: 1.8;
+        }
+
+
+        .banner-subtitle strong {
+            color: #ffdf00;
+        }
+
+        .service-button a {
+            text-decoration: none;
+        }
+
+        .service-button a button {
+            background-color: #3143ef;
+            color: #fff;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background-color 0.4s ease, transform 0.2s ease;
+        }
+
+        .service-button a button:hover {
+            background-color: #2536b4;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .banner-content {
+                margin-left: 0;
+
+            }
+
+            .banner-title h2 {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+
+            .banner-subtitle {
+                font-size: 16px;
+            }
+
+            .service-button a button {
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+        }
+
+        /* For extra small devices (phones) */
+        @media (max-width: 480px) {
+            .banner-section {
+                height: auto;
+                /* Allow flexible height */
+                padding: 60px 10px;
+            }
+
+            .banner-title h2 {
+                font-size: 1.8em;
+                letter-spacing: 0.5px;
+            }
+
+            .banner-subtitle {
+                font-size: 13px;
+            }
+
+            .service-button a button {
+                padding: 10px 20px;
+                font-size: 0.9em;
+            }
+        }
+
+        /* Ultra-wide screens (larger desktops) */
+        @media (min-width: 1200px) {
+            .banner-title h2 {
+                font-size: 3.2em;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+            }
+
+            .service-button a button {
+                padding: 18px 35px;
+                font-size: 1.3em;
+            }
+        }
+
+        .service-card {
+            margin-bottom: 80px;
+        }
+
+
+        .booking-card {
+            border-radius: 10px;
+            height: 450px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        .booking-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 72, 112, 0);
+            transition: 0.3s;
+        }
+
+        .booking-card .book-container .content {
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            transform: translateY(-200px);
+            transition: 0.3s;
+        }
+
+        .booking-card .informations-container {
+            padding: 20px;
+            background: var(--grey2);
+            transform: translateY(340px);
+            transition: 0.3s;
+        }
+
+        .booking-card .informations-container .more-information {
+            opacity: 0;
+            transition: 0.3s;
+        }
+
+        .booking-card .informations-container .more-information .staff_rating .fa-solid {
+            margin-top: 10px;
+            color: gold;
+        }
+
+        .booking-card .informations-container .more-information .info-and-date-container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .booking-card .informations-container .more-information .info-and-date-container .box {
+            flex: 1 1 calc(50% - 20px);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: white;
+            font-weight: bold;
+            font-size: 0.9em;
+            box-sizing: border-box;
+        }
+
+        .booking-card .informations-container .more-information .info-and-date-container .box.info {
+            color: var(--orange);
+            margin-right: 10px;
+        }
+
+        .booking-card .informations-container .more-information .disclaimer {
+            margin-top: 20px;
+            font-size: 0.8em;
+            color: var(--grey);
+        }
+
+        .booking-card:hover::before {
+            background: rgba(10, 72, 112, 0.6);
+        }
+
+        .booking-card:hover .book-container .content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .booking-card:hover .informations-container {
+            transform: translateY(0);
+        }
+
+        .booking-card:hover .informations-container .more-information {
+            opacity: 1;
+        }
+
+        h2 {
+            color: var(--blue);
+            font-weight: 500;
+            font-size: 1.5em;
+            margin: 0;
+        }
+
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul .booking-card {
+            position: relative;
+            width: 300px;
+            display: flex;
+            flex: 0 0 300px;
+            flex-direction: column;
+            margin: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            overflow: hidden;
+            background-position: center center;
+            background-size: cover;
+            text-align: center;
+            color: var(--blue);
+            transition: 0.3s;
+        }
+
+        ul .booking-card .book-container {
+            height: 200px;
+        }
+
+        ul .booking-card .book-container .content .btn {
+            border: 3px solid white;
+            padding: 10px 15px;
+            background: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 1.3em;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        ul .booking-card .book-container .content .btn:hover {
+            background: white;
+            border: 0 solid white;
+            color: var(--blue);
+        }
+
+        ul .booking-card .informations-container .title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        ul .booking-card .informations-container .title::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            width: 50px;
+            margin: auto;
+            background: var(--blue);
+        }
+
+        ul .booking-card .price {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        ul .booking-card .price .icon {
+            margin-right: 10px;
+        }
+
+        .credits {
+            display: table;
+            background: var(--blue);
+            color: white;
+            line-height: 25px;
+            margin: 10px auto;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .credits a {
+            color: var(--blue2);
+        }
+
+        h1 {
+            margin: 10px 20px;
+            font-size: 1.8em;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            position: relative;
+            z-index: 9999;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .form-container h1 {
+            color: #3143ef;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .close {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .user-details {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .user-name,
+        .user-email,
+        .user-mobile,
+        .user-address {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        .service-problem {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 5px;
+            margin: 20px 0px 20px 0;
+        }
+
+        .user-select {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            width: 100%;
+        }
+
+        .serviceprovider,
+        .servicetype,
+        .servicedate-start,
+        .servicedate-end {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            flex: 1 1 calc(50% - 20px);
+            box-sizing: border-box;
+        }
+
+        select {
+            appearance: none;
+            background-color: white;
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 12px;
+            padding-right: 30px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            outline: none;
+        }
+
+        .form-container button {
+            background-color: #3143ef;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fd5b03;
+        }
+
+        select,
+        input[type="date"] {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+
+        .form-container button {
+            background-color: #3143ef;
+            color: white;
+            padding: 10px;
+            margin-top: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fd5b03;
+        }
+
+
+        /* Fade-in animation for form appearance */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /* Media query for smaller screens */
+        @media screen and (max-width: 768px) {
+            .form-container {
+                transform: scale(0.9);
+                /* Shrinks the form to 90% of its size */
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .form-container {
+                transform: scale(0.8);
+                /* Shrinks the form to 80% of its size */
+            }
+
+            .form-container h1 {
+                font-size: 28px;
+                /* Optional: reduce font size of heading */
+            }
+        }
+
+        .flatpickr-calendar .flatpickr-monthDropdown-months {
+            display: inline-block !important;
+            z-index: 99999;
+            position: relative;
+        }
+
+        .flatpickr-monthDropdown-months select {
+            appearance: auto !important;
+            background-color: #fff;
+            color: #000;
+        }
+
+        .blocked-date {
+            background-color: red !important;
+            color: white !important;
+        }
+        #service-list{
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- page wrapper start -->
+
+    <div class="page-wrapper">
+
+        <!--Header start-->
+        <header id="site-header" class="header header-3">
+            <div class="header-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-center justify-content-between">
+                            <a class="navbar-brand logo" href="index.html">
+                                <img id="logo-img" class="img-fluid" src="images/conocimientologo.png" alt="">
+                            </a>
+                            <a class="btn btn-theme d-none d-sm-block" href="#theme-bg"><span>Request A
+                                    Quote</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Navbar -->
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavDropdown" aria-expanded="false"
+                                    aria-label="Toggle navigation">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <!-- Home -->
+                                        <li class="nav-item dropdown"> <a class="nav-link active"
+                                                href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item dropdown"> <a class="nav-link " href="contactus.html">About
+                                                Us</a>
+                                        </li>
+
+                                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#"
+                                                data-bs-toggle="dropdown">Services</a>
+                                            <div class="dropdown-menu">
+                                                <ul class="list-unstyled">
+                                                    <li class="dropdown dropdown-submenu"> <a href="#"
+                                                            class="dropdown-toggle" data-bs-toggle="dropdown">
+                                                            Normal Services
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="electrician.html">Electrician</a>
+                                                            </li>
+                                                            <li><a href="#">Plumber</a>
+                                                            </li>
+                                                            <li><a href="#">AC Technician</a>
+                                                            </li>
+                                                            <li><a href="#">Gardener</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown dropdown-submenu"> <a href="#"
+                                                            class="dropdown-toggle" data-bs-toggle="dropdown">
+                                                            Contract Services
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="nurse.html">Nurse</a>
+                                                            </li>
+                                                            <li><a href="#">Babysitter</a>
+                                                            </li>
+                                                            <li><a href="#">Security guard</a>
+                                                            </li>
+                                                            <li><a href="#">Maid</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown"> <a class="nav-link "
+                                                href="contactus.html">Contact
+                                                Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="right-nav align-items-center d-flex justify-content-end">
+                                    <div class="search-icon me-1 me-sm-3">
+                                        <a id="search" href="javascript:void(0)"><i class="flaticon-search"></i></a>
+                                    </div>
+                                    <div>
+                                        <!-- <div class="cart"> <a href="#" id="header-cart-btn">
+                                        <span class="cart-badge">2</span> <i
+                                            class="flaticon-shopping-cart"></i></a>
+                                    <ul class="cart-list">
+                                        <li>
+                                            <a href="#" class="image">
+                                                <img src="images/01.jpg" class="img-fluid cart-thumb" alt="">
+                                            </a>
+                                            <div class="cart-item-desc">
+                                                <h6><a href="#">Women's Fashion</a></h6>
+                                                <p>1x - <span class="price">$132</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="image">
+                                                <img src="images/02.jpg" class="img-fluid cart-thumb" alt="">
+                                            </a>
+                                            <div class="cart-item-desc">
+                                                <h6><a href="#">Goggles</a></h6>
+                                                <p>1x - <span class="price">$28</span>
+                                                </p>
+                                            </div>
+                                        </li>
+                                        <li class="total text-end"> <span class="d-block">Total: $160.00</span>
+                                        </li>
+                                        <li><a href="product-cart.html" class="btn">Cart</a>
+                                            <a href="product-checkout.html" class="btn btn-border">Checkout</a>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                                    </div>
+                                    <style>
+                                        .profile-icon {
+                                            position: relative;
+                                            display: inline-block;
+                                        }
+
+                                        .dropdown-content {
+                                            display: none;
+                                            position: absolute;
+                                            background-color: #0d092c;
+                                            min-width: 160px;
+                                            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                            border-radius: 6px;
+                                            /* z-index: 1; */
+                                            right: 0;
+                                            /* Align dropdown to the right */
+                                        }
+
+                                        .dropdown-content a {
+                                            color: #ffffff;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+
+                                        .dropdown-content a:after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            width: 0;
+                                            height: 1px;
+                                            bottom: 0.5%;
+                                            background-color: #ffffff;
+                                            transition: width 0.3s ease;
+                                        }
+
+                                        .dropdown-content a:hover {
+                                            color: aliceblue;
+                                            cursor: pointer;
+                                            transform: scale(1.08);
+                                        }
+
+                                        .dropdown-content a:hover:after {
+                                            width: 80%;
+                                        }
+
+                                        .profile-icon:hover .dropdown-content {
+                                            display: block;
+                                        }
+                                    </style>
+                                    <div class="profile-icon">
+
+                                        <a href="registration_login.html" id="profile-icon"><i
+                                                class="fa-solid fa-user"></i></a>
+
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-input" id="search-input-box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search Here"
+                        style="background-color: white; color: black; padding: 10px;">
+                    <button type="submit" class="btn"></button> <span class="flaticon-close" id="close-search"
+                        title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+        <!--Header End-->
+
+        <!--service page start-->
+
+        <div class="banner-section">
+            <div class="banner-content">
+                <div class="banner-title">
+                    <h2>Compassionate Nursing Care, Right at Your Doorstep!</h2>
+                </div>
+                <div class="banner-subtitle">
+                    Trusted, Experienced, and Dedicated Nurses for All Your Healthcare Needs. We offer 24/7 care
+                    tailored to your needs, ensuring comfort and recovery in the safety of your home.<br><strong>Book
+                        Now for Personalized Care and Support.</strong>
+                </div>
+                <div class="service-button">
+                    <a href="#serviceheader">
+                        <button>See Our Services</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="service-header" id="serviceheader">
+            <h3 class="text-center mb-4 mt-5" style="color: #3143ef; text-transform: uppercase; font-weight: 600;">
+                Nursing Services
+            </h3>
+        </div>
+
+        <div class="service-card" id="service-card">
+            <ul style="display:flex; align-items:center; justify-content:center;">
+                <li class="booking-card" style="background-image: url('images/inhomecare.jpg');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Home Nursing Care</h2>
+                        <p class="sub-title">Involves installing or replacing
+                            electrical wires to ensure safe and efficient power distribution throughout the
+                            home.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('https://veritascare.co.uk/wp-content/uploads/2022/08/Featured-image1200-%C3%97-628px-1-1030x539.png');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn" name="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Post-Operative Care</h2>
+                        <p class="sub-title">Involves designing and installing efficient lighting systems for both
+                            indoor and outdoor spaces, enhancing aesthetics and functionality.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('https://www.access-healthcare.com/wp-content/uploads/2020/10/long-shot-nurse-helping-old-man-getting-up_23-2148239021.jpg');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Elderly Care</h2>
+                        <p class="sub-title">Involves the installation of ceiling fans to improve air circulation,
+                            reduce energy costs, and enhance comfort in homes or offices.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('https://thryvemedica.ca/wp-content/uploads/2023/05/chronic-disease-prevention-and-management.jpg');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Chronic Illness Management</h2>
+                        <p class="sub-title">IInvolves installing or upgrading electrical outlets and switches to
+                            provide safe and convenient access to power throughout the home or business.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('data:image/jpeg;base64,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');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title">Mother & Baby Care</h2>
+                        <p class="sub-title">Involves installing backup generators to provide uninterrupted power during
+                            outages and performing regular maintenance for optimal performance.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('https://as2.ftcdn.net/v2/jpg/04/99/14/39/1000_F_499143997_ZNLtwqkGGswW4ThQ5ew5VGm2TDy2CXEP.jpg');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title"> Rehabilitation Support</h2>
+                        <p class="sub-title">Involves installing and configuring smart devices like lights, thermostats,
+                            and security systems for a more convenient and energy-efficient home.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/ICU_IV_1.jpg/420px-ICU_IV_1.jpg');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title"> IV Therapy & Injections</h2>
+                        <p class="sub-title">Involves installing and configuring smart devices like lights, thermostats,
+                            and security systems for a more convenient and energy-efficient home.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+                <li class="booking-card"
+                    style="background-image: url('https://media.licdn.com/dms/image/v2/C4E1BAQFZVrudIuGbcw/company-background_10000/company-background_10000/0/1584056470271/24_7_nursing_care_cover?e=2147483647&v=beta&t=qsW9ebF6s2HU8zRV2Y6IcUBmyGmsMrQH0R19rxr_ssM');">
+                    <div class="book-container">
+                        <div class="content">
+                            <button class="btn">BOOK NOW</button>
+                        </div>
+                    </div>
+                    <div class="informations-container">
+                        <h2 class="title"> 24/7 Nursing Care</h2>
+                        <p class="sub-title">Involves installing and configuring smart devices like lights, thermostats,
+                            and security systems for a more convenient and energy-efficient home.</p>
+                        <div class="more-information">
+                            <div class="staff_rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half"></i>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!--service page end-->
+
+        <!--form popup start-->
+
+        <div class="overlay hidden" id="form_overlay">
+            <div class="form-container" id="form_hidden">
+                <span class="close" id="close_form">&times;</span>
+                <h1 style="font-size: 35px;">Book Your Appointment</h1>
+                <form action="electrician.php" id="bookingapplicationform" name="bookingapplicationform" method="POST">
+                    <div class="user-details">
+                        <div class="user-name">
+                            <label for="name">Name:</label>
+                            <input type="text" id="name" name="name" value="<?php echo ($name); ?>" required>
+                        </div>
+
+                        <div class="user-email">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email" name="email" value="<?php echo ($email); ?>" required>
+                        </div>
+
+                        <div class="user-mobile">
+                            <label for="mobile_no">Mobile No:</label>
+                            <input type="tel" id="mobile_no" name="mobile_no" value="<?php echo ($mobile_no); ?>"
+                                required>
+                        </div>
+
+                        <div class="user-address">
+                            <label for="address">Address:</label>
+                            <input type="text" id="address" name="address" required>
+                        </div>
+                    </div>
+
+                    <div class="user-select">
+                        <div class="serviceprovider" id="serviceprovider">
+                            <label for="serviceprovider">Service Provider:</label>
+                            <select id="serviceprovider-list" name="serviceprovider-list">
+                                <option value="" disabled selected>Select Service Provider</option>
+                                <option value="Nurse">Nurse</option>
+                            </select>
+                        </div>
+
+                        <div class="servicetype" id="servicetype">
+                            <label for="servicetype">Service Type:</label>
+                            <select id="servicetype-list" name="servicetype" required>
+                                <option value="" disabled selected>Select Service Type</option>
+                                <option value="Home Nursing Care">Home Nursing Care</option>
+                                <option value="Post-Operative Care">Post-Operative Care</option>
+                                <option value="Elderly Care">Elderly Care</option>
+                                <option value="Chronic Illness Management">Chronic Illness Management</option>
+                                <option value="Mother & Baby Care">Mother & Baby Care</option>
+                                <option value="Rehabilitation Support">Rehabilitation Support</option>
+                                <option value="IV Therapy & Injections">IV Therapy & Injections</option>
+                                <option value="24/7 Nursing Care">24/7 Nursing Care
+                                </option>
+                            </select>
+                        </div>
+
+
+                        <div class="servicedate-start">
+                            <label for="start-date">Start Date:</label>
+                            <input type="date" name="start-date" id="start-date" autocomplete="off" required>
+                        </div>
+
+                        <div class="servicedate-end">
+                            <label for="end-date">End Date:</label>
+                            <input type="date" name="end-date" id="end-date" autocomplete="off" required>
+                        </div>
+                    </div>
+
+                    <div class="service-problem">
+                        <label for="problem">Service requirement:</label>
+                        <textarea style="outline:none; color:#3143ef" id="servicerequirement" name="servicerequirement"
+                            required></textarea>
+                    </div>
+
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <!--form popup end-->
+
+
+
+        <!--footer start-->
+
+        <footer class="footer">
+            <div class="primary-footer dark-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                            <h4 class="mb-4 text-white">Our Services</h4>
+                            <div class="footer-list">
+                                <ul class="list-unstyled" id="service-list">
+                                    <li><a href="electrician.html">Electrician</a>
+                                    </li>
+                                    <li><a href="#">Plumber</a>
+                                    </li>
+                                    <li> <a href="#">AC Technician</a>
+                                    </li>
+                                    <li> <a href="#">Gardener</a>
+                                    </li>
+                                    <li> <a href="nurse.html">Nurse</a>
+                                    </li>
+                                    <li> <a href="#">Babysitter </a>
+                                    </li>
+                                    <li> <a href="#"> Security guard</a>
+                                    </li>
+                                    <li> <a href="#">Maid</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                            <h4 class="mb-4 text-white">NewsLetter</h4>
+                            <p>Get started for 1 Month free trial No Purchace required.</p>
+                            <div class="subscribe-form">
+                                <form id="mc-form" class="group">
+                                    <input value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address"
+                                        required="" type="email">
+                                    <input class="btn btn-theme" name="subscribe" value="Subscribe" type="submit">
+                                </form>
+                            </div>
+                            <div class="social-icons social-colored mt-5">
+                                <ul class="list-inline">
+                                    <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="social-dribbble"><a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </li>
+                                    <li class="social-skype"><a href="#"><i class="fab fa-skype"></i></a>
+                                    </li>
+                                    <li class="social-linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 ms-auto col-md-12 mt-5 mt-lg-0">
+                            <h4 class="mb-4 text-white">About Consulterz</h4>
+                            <p class="mb-3">Consulterz - Business Consulting HTML5 Template Is fully Responsive,
+                                Creative, Modern HTML5 Template.</p>
+                            <div class="footer-cntct">
+                                <ul class="media-icon list-unstyled">
+                                    <li>
+                                        <p class="mb-0"><i class="flaticon-paper-plane"></i> 423B, Road Wordwide
+                                            Country, USA</p>
+                                    </li>
+                                    <li><i class="flaticon-email"></i> <a
+                                            href="mailto:themeht23@gmail.com">themeht23@gmail.com</a>
+                                    </li>
+                                    <li><i class="flaticon-phone"></i> <a href="tel:+912345678900">+91-234-567-8900</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secondary-footer theme-bg">
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-lg-6"> <span>Copyright 2019 Consulterz Theme by <u><a
+                                            href="#">ThemeHt</a></u> | All
+                                    Rights Reserved</span>
+                            </div>
+                            <div class="col-lg-6 text-lg-end footer-list md-mt-2">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item mb-0"><a href="about-our-company.html">About Us</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="team.html">Team</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="contact.html">Contact Us</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="privacy-policy.html">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="terms-and-conditions.html">Terms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--footer end-->
+
+        <!--back-to-top start-->
+
+        <div class="scroll-top"><a class="smoothscroll" href="#top"><i class="flaticon-top"></i></a></div>
+
+        <!--back-to-top end-->
+
+        <!-- inject js start -->
+
+        <!--== jquery -->
+        <script src="js/theme.js"></script>
+
+        <!--== theme-plugin -->
+        <script src="js/theme-plugin.js"></script>
+
+        <!--== color-customize -->
+        <script src="js/color-customizer.js"></script>
+
+        <!--== theme-script -->
+        <script src="js/theme-script.js"></script>
+
+        <!-- inject js end -->
+
+    </div>
+    <!-- page wrapper end -->
+
+    <script>
+        // const blockedDates = <?php echo $blockedDatesJSON; ?>;
+
+        // Helper function to check if a date is within the blocked range
+        function isBlockedDate(dateStr) {
+            return blockedDates.some(block => {
+                const startDate = new Date(block.start);
+                const endDate = new Date(block.end);
+                const currentDate = new Date(dateStr);
+
+                // Ensure the date is within the range from start to end (inclusive)
+                return currentDate >= startDate && currentDate <= endDate;
+            });
+        }
+
+        // Function to initialize flatpickr and block date ranges
+        function initializeFlatpickr(selector) {
+            flatpickr(selector, {
+                dateFormat: "Y-m-d",
+                disable: blockedDates.map(d => ({
+                    from: d.start,
+                    to: new Date(new Date(d.end).setDate(new Date(d.end).getDate())) // Prevent blocking extra date
+                })),  // Disable blocked date ranges
+
+                // Customize day rendering to apply styles
+                onDayCreate: function (dObj, dStr, fp, dayElem) {
+                    const dateStr = dayElem.dateObj.toISOString().slice(0, 10); // Format date as YYYY-MM-DD
+
+                    // Apply color to the blocked dates
+                    if (isBlockedDate(dateStr)) {
+                        dayElem.style.backgroundColor = "red"; // Apply red background
+                        dayElem.style.color = "white"; // Apply white text color
+                    }
+                },
+                monthSelectorType: "dropdown" // Optional: for month dropdown
+            });
+        }
+
+        // Initialize flatpickr for both start-date and end-date fields
+        initializeFlatpickr("#start-date");
+        initializeFlatpickr("#end-date");
+
+    </script>
+
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const bookButtons = document.querySelectorAll('.btn');
+            const overlay = document.getElementById('form_overlay');
+            const closeBtn = document.getElementById('close_form');
+            const form = document.getElementById("bookingapplicationform");
+
+            bookButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    overlay.classList.remove('hidden');
+                });
+            });
+
+            // Close the form when clicking on the close button
+            closeBtn.addEventListener('click', function () {
+                overlay.classList.add('hidden');
+                form.reset();
+            });
+
+            // Close the form when clicking outside of it (optional)
+            overlay.addEventListener('click', function (e) {
+                if (e.target === overlay) {
+                    overlay.classList.add('hidden');
+                    form.reset();
+                }
+            });
+        });
+
+    </script>
+
+
+</body>
+
+</html>

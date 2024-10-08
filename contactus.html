@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- meta tags -->
+    <meta charset="utf-8">
+    <meta name="keywords"
+        content="bootstrap 5, premium, multipurpose, sass, scss, saas, rtl, business, consulting, accounting">
+    <meta name="description" content="Consulting Finance Accounting HTML5 Template">
+    <meta name="author" content="www.themeht.com">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Title -->
+    <title>Conocimiento infotech- Consulting Finance Accounting + RTL Support</title>
+
+    <!-- favicon icon -->
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <!-- inject css start -->
+
+    <!--== bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+
+    <!--== animate -->
+    <link href="css/animate.css" rel="stylesheet" type="text/css">
+
+    <!--== fontawesome -->
+    <link href="css/fontawesome-all.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!--== magnific-popup -->
+    <link href="css/magnific-popup.css" rel="stylesheet" type="text/css">
+
+    <!--== owl.carousel -->
+    <link href="css/owl.carousel.css" rel="stylesheet" type="text/css">
+
+    <!--== lightslider -->
+    <link href="css/lightslider.min.css" rel="stylesheet" type="text/css">
+
+    <!--== spacing -->
+    <link href="css/spacing.css" rel="stylesheet" type="text/css">
+
+    <!--== base -->
+    <link href="css/base.css" rel="stylesheet" type="text/css">
+
+    <!--== shortcodes -->
+    <link href="css/shortcodes.css" rel="stylesheet" type="text/css">
+
+    <!--== style -->
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+
+    <!--== responsive -->
+    <link href="css/responsive.css" rel="stylesheet" type="text/css">
+
+    <!--== color-customizer -->
+    <link href="#" data-style="styles" rel="stylesheet">
+    <link href="css/color-customizer.css" rel="stylesheet" type="text/css">
+
+    <!-- inject css end -->
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        .banner-section {
+            width: 100%;
+            height: 100vh;
+            background: linear-gradient(90deg, #0d092c, transparent), url('images/Nurse.jpg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19);
+            user-select: none;
+        }
+
+        .banner-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .banner-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            margin-left: 70px;
+            padding: 20px;
+        }
+
+
+        .banner-title h2 {
+            font-size: 2.8em;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #fff;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .banner-subtitle {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            font-size: 2em;
+            margin-bottom: 30px;
+            color: #f0f0f0;
+            line-height: 1.8;
+        }
+
+
+        .banner-subtitle strong {
+            color: #ffdf00;
+        }
+
+        .banner-subtitle a {
+            text-decoration: none;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .banner-section {
+                width: 100%;
+                height: 80vh;
+            }
+
+            .contact-form {
+                flex-direction: column;
+            }
+
+            .form-container {
+                margin-bottom: 25px;
+            }
+
+            .banner-content {
+                margin-left: 0;
+
+            }
+
+            .banner-title h2 {
+                font-size: 2.2em;
+                letter-spacing: 1px;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+                font-weight: 600;
+            }
+
+        }
+
+        /* For extra small devices (phones) */
+        @media (max-width: 480px) {
+
+            .banner-section {
+                height: auto;
+                /* Allow flexible height */
+                padding: 60px 10px;
+            }
+
+            .contact-form {
+                flex-direction: column;
+            }
+
+            .form-container {
+                margin-bottom: 25px;
+            }
+
+            .banner-title h2 {
+                font-size: 1.8em;
+                letter-spacing: 0.5px;
+            }
+
+            .banner-subtitle {
+                font-size: 15px;
+                font-weight: 600;
+            }
+
+        }
+
+        /* Ultra-wide screens (larger desktops) */
+        @media (min-width: 1200px) {
+            .banner-title h2 {
+                font-size: 3.2em;
+            }
+
+            .banner-subtitle {
+                font-size: 18px;
+                font-weight: 700;
+            }
+
+        }
+
+        .contactus-body {
+            margin: 0px 50px;
+        }
+
+        .contact-form {
+            margin: 50px 0 80px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact-img {
+            height: 600px;
+            width: 600px;
+            background: linear-gradient(300deg, #0d092c, transparent), url('images/05.jpg') no-repeat center center/cover;
+            border-bottom-right-radius: 10px;
+            border-top-right-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .information {
+            height: 300px;
+            width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+
+        .address {
+            height: 60px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            background-color: #3143ef;
+            border-radius: 10px;
+            color: white;
+            transition: all ease 0.5s;
+        }
+
+        .email-id {
+            height: 60px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            background-color: #3143ef;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+
+        }
+
+        .phone-number {
+            height: 60px;
+            width: 80%;
+            display: flex;
+            align-items: center;
+            background-color: #3143ef;
+            border-radius: 10px;
+            transition: all ease 0.5s;
+
+        }
+
+        .address:hover {
+            transform: scale(1.05);
+        }
+
+        .email-id:hover {
+            transform: scale(1.05);
+        }
+
+        .phone-number:hover {
+            transform: scale(1.05);
+        }
+
+        #address-icon,
+        #email-icon,
+        #phone-icon {
+            font-size: 30px;
+            margin: 0 20px 0 20px;
+            color: white;
+
+        }
+
+        .form-container {
+            max-width: 600px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #fff;
+            position: relative;
+        }
+
+        .form-container h1 {
+            color: #3143ef;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container input,
+        .form-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+
+        .timebooking {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        #datebooking {
+            height: 50px;
+            background-color: #3143ef;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 50%;
+            transition: all 0.5s ease;
+        }
+
+        #datebooking:hover {
+            background-color: #fd5b03;
+        }
+
+        .form-container button {
+            background-color: #3143ef;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.5s ease;
+        }
+
+        .form-container button:hover {
+            background-color: #fd5b03;
+        }
+
+        #service-list {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- page wrapper start -->
+    <div class="page-wrapper">
+
+        <!--Header start-->
+        <header id="site-header" class="header header-3">
+            <div class="header-middle">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 d-flex align-items-center justify-content-between">
+                            <a class="navbar-brand logo" href="index.html">
+                                <img id="logo-img" class="img-fluid" src="images/conocimientologo.png" alt="">
+                            </a>
+                            <a class="btn btn-theme d-none d-sm-block" href="#theme-bg"><span>Request A
+                                    Quote</span></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header-wrap">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <!-- Navbar -->
+                            <nav class="navbar navbar-expand-lg">
+                                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#navbarNavDropdown" aria-expanded="false"
+                                    aria-label="Toggle navigation"> <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </button>
+                                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                                    <ul class="navbar-nav">
+                                        <!-- Home -->
+                                        <li class="nav-item dropdown"> <a class="nav-link active"
+                                                href="index.html">Home</a>
+                                        </li>
+                                        <li class="nav-item dropdown"> <a class="nav-link " href="#"
+                                                data-bs-toggle="dropdown">About Us</a>
+                                            <div class="dropdown-menu">
+                                                <ul class="list-unstyled">
+                                                    <li><a href="#">About Our Company</a>
+                                                    </li>
+                                                    <li><a href="#">Our History</a>
+                                                    </li>
+                                                    <li><a href="#">Mission &amp; Values</a>
+                                                    </li>
+                                                    <li><a href="#">Career</a>
+                                                    </li>
+                                                    <li><a href="#">Career Single</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+
+                                        <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#"
+                                                data-bs-toggle="dropdown">Services</a>
+                                            <div class="dropdown-menu">
+                                                <ul class="list-unstyled">
+                                                    <li class="dropdown dropdown-submenu"> <a href="#"
+                                                            class="dropdown-toggle" data-bs-toggle="dropdown">
+                                                            Normal Services
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="electrician.html">Electrician</a>
+                                                            </li>
+                                                            <li><a href="#">Plumber</a>
+                                                            </li>
+                                                            <li><a href="#">AC Technician</a>
+                                                            </li>
+                                                            <li><a href="#">Gardener</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="dropdown dropdown-submenu"> <a href="#"
+                                                            class="dropdown-toggle" data-bs-toggle="dropdown">
+                                                            Contract Services
+                                                        </a>
+                                                        <ul class="dropdown-menu">
+                                                            <li><a href="nurse.html">Nurse</a>
+                                                            </li>
+                                                            <li><a href="#">Babysitter</a>
+                                                            </li>
+                                                            <li><a href="#">Security guard</a>
+                                                            </li>
+                                                            <li><a href="#">Maid</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="nav-item dropdown"> <a class="nav-link "
+                                                href="contactus.html">Contact
+                                                Us</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="right-nav align-items-center d-flex justify-content-end">
+                                    <div class="search-icon me-1 me-sm-3">
+                                        <a id="search" href="javascript:void(0)"><i class="flaticon-search"></i></a>
+                                    </div>
+                                    <div>
+                                        <!-- <div class="cart"> <a href="#" id="header-cart-btn">
+                                                <span class="cart-badge">2</span> <i
+                                                    class="flaticon-shopping-cart"></i></a>
+                                            <ul class="cart-list">
+                                                <li>
+                                                    <a href="#" class="image">
+                                                        <img src="images/01.jpg" class="img-fluid cart-thumb" alt="">
+                                                    </a>
+                                                    <div class="cart-item-desc">
+                                                        <h6><a href="#">Women's Fashion</a></h6>
+                                                        <p>1x - <span class="price">$132</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <a href="#" class="image">
+                                                        <img src="images/02.jpg" class="img-fluid cart-thumb" alt="">
+                                                    </a>
+                                                    <div class="cart-item-desc">
+                                                        <h6><a href="#">Goggles</a></h6>
+                                                        <p>1x - <span class="price">$28</span>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li class="total text-end"> <span class="d-block">Total: $160.00</span>
+                                                </li>
+                                                <li><a href="product-cart.html" class="btn">Cart</a>
+                                                    <a href="product-checkout.html" class="btn btn-border">Checkout</a>
+                                                </li>
+                                            </ul>
+                                        </div> -->
+                                    </div>
+                                    <style>
+                                        .profile-icon {
+                                            position: relative;
+                                            display: inline-block;
+                                        }
+
+                                        .dropdown-content {
+                                            display: none;
+                                            position: absolute;
+                                            background-color: #0d092c;
+                                            min-width: 160px;
+                                            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                                            border-radius: 6px;
+                                            /* z-index: 1; */
+                                            right: 0;
+                                            /* Align dropdown to the right */
+                                        }
+
+                                        .dropdown-content a {
+                                            color: #ffffff;
+                                            padding: 12px 16px;
+                                            text-decoration: none;
+                                            display: block;
+                                        }
+
+                                        .dropdown-content a:after {
+                                            content: "";
+                                            position: absolute;
+                                            left: 0;
+                                            width: 0;
+                                            height: 1px;
+                                            bottom: 0.5%;
+                                            background-color: #ffffff;
+                                            transition: width 0.3s ease;
+                                        }
+
+                                        .dropdown-content a:hover {
+                                            color: aliceblue;
+                                            cursor: pointer;
+                                            transform: scale(1.08);
+                                        }
+
+                                        .dropdown-content a:hover:after {
+                                            width: 80%;
+                                        }
+
+                                        .profile-icon:hover .dropdown-content {
+                                            display: block;
+                                        }
+                                    </style>
+                                    <div class="profile-icon">
+
+                                        <a href="registration_login.html" id="profile-icon"><i
+                                                class="fa-solid fa-user"></i></a>
+
+                                    </div>
+
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="search-input" id="search-input-box">
+            <div class="container ">
+                <form class="d-flex justify-content-between search-inner">
+                    <input type="text" class="form-control" id="search-input" placeholder="Search Here"
+                        style="background-color: white; color: black; padding: 10px;">
+                    <button type="submit" class="btn"></button> <span class="flaticon-close" id="close-search"
+                        title="Close Search"></span>
+                </form>
+            </div>
+        </div>
+        <!--Header End-->
+
+        <div class="banner-section">
+            <div class="banner-content">
+                <div class="banner-title">
+                    <h2>CONTACT US</h2>
+                </div>
+                <div class="banner-subtitle">
+                    <a href="index.html">
+                        Home
+                    </a>
+                    <span> > </span>
+                    <span> Contact</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="contactus-body">
+            <div class="contact-form">
+                <div class="form-container" id="form_hidden">
+                    <h1 style="font-size: 35px;">Contact Form</h1>
+                    <form action="elecrician.html" id="bookingapplication" name="bookingapplication" method="POST">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" name="name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="mobile_no">Mobile No:</label>
+                        <input type="tel" id="mobile_no" name="mobile_no" required>
+
+                        <label for="address">Address:</label>
+                        <input type="text" id="address" name="address" required>
+
+                        <label for="problem">Message:</label>
+                        <textarea style="outline:none; color:#3143ef" id="problemstm" name="problemstm"
+                            required></textarea>
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
+                <div class="contact-img">
+                    <div class="information">
+                        <div class="address">
+                            <i class="flaticon-paper-plane" id="address-icon"></i>
+                            <a href="#location" style="color:white">Santi Pally, Bapuji Nagar, Jadavpur, Kolkata, West
+                                Bengal</a>
+                        </div>
+                        <div class="email-id">
+                            <i class="flaticon-email" id="email-icon"></i> <a href="mailto:themeht23@gmail.com"
+                                style="color:white">themeht23@gmail.com</a>
+                        </div>
+                        <div class="phone-number">
+                            <i class="flaticon-phone" id="phone-icon"></i> <a href="tel:+912345678900"
+                                style="color:white">+91-234-567-8900</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="location" id="location"></div>
+        <h1 style="text-align: center;text-transform: uppercase; color:#3143ef; margin-bottom:15px;">Find us</h1>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13343.709877096928!2d88.370598!3d22.4921796!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x24059345c577071b%3A0xb82369e867132ac6!2sConocimiento%20Infotech%20%7C%20Website%20Development%20Company%20%7C%20Mobile%20App%20and%20Automation%20Development%20Company%20in%20Jadavpur%20Kolkata!5e1!3m2!1sen!2sin!4v1727090281895!5m2!1sen!2sin"
+            width="600" height="450" style="border:0; margin-bottom:100px" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+
+        <!--footer start-->
+
+        <footer class="footer">
+            <div class="primary-footer dark-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                            <h4 class="mb-4 text-white">Our Services</h4>
+                            <div class="footer-list">
+                                <ul class="list-unstyled" id="service-list">
+                                    <li><a href="electrician.html">Electrician</a>
+                                    </li>
+                                    <li><a href="#">Plumber</a>
+                                    </li>
+                                    <li> <a href="#">AC Technician</a>
+                                    </li>
+                                    <li> <a href="#">Gardener</a>
+                                    </li>
+                                    <li> <a href="nurse.html">Nurse</a>
+                                    </li>
+                                    <li> <a href="#">Babysitter </a>
+                                    </li>
+                                    <li> <a href="#"> Security guard</a>
+                                    </li>
+                                    <li> <a href="#">Maid</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+                            <h4 class="mb-4 text-white">NewsLetter</h4>
+                            <p>Get started for 1 Month free trial No Purchace required.</p>
+                            <div class="subscribe-form">
+                                <form id="mc-form" class="group">
+                                    <input value="" name="EMAIL" class="email" id="mc-email" placeholder="Email Address"
+                                        required="" type="email">
+                                    <input class="btn btn-theme" name="subscribe" value="Subscribe" type="submit">
+                                </form>
+                            </div>
+                            <div class="social-icons social-colored mt-5">
+                                <ul class="list-inline">
+                                    <li class="social-facebook"><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li class="social-dribbble"><a href="#"><i class="fab fa-dribbble"></i></a>
+                                    </li>
+                                    <li class="social-skype"><a href="#"><i class="fab fa-skype"></i></a>
+                                    </li>
+                                    <li class="social-linkedin"><a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                    </li>
+                                    <li class="social-youtube"><a href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-lg-5 ms-auto col-md-12 mt-5 mt-lg-0">
+                            <h4 class="mb-4 text-white">About Consulterz</h4>
+                            <p class="mb-3">Consulterz - Business Consulting HTML5 Template Is fully Responsive,
+                                Creative, Modern HTML5 Template.</p>
+                            <div class="footer-cntct">
+                                <ul class="media-icon list-unstyled">
+                                    <li>
+                                        <p class="mb-0"><i class="flaticon-paper-plane"></i> 423B, Road Wordwide
+                                            Country, USA</p>
+                                    </li>
+                                    <li><i class="flaticon-email"></i> <a
+                                            href="mailto:themeht23@gmail.com">themeht23@gmail.com</a>
+                                    </li>
+                                    <li><i class="flaticon-phone"></i> <a href="tel:+912345678900">+91-234-567-8900</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="secondary-footer theme-bg">
+                <div class="container">
+                    <div class="copyright">
+                        <div class="row">
+                            <div class="col-lg-6"> <span>Copyright 2019 Consulterz Theme by <u><a
+                                            href="#">ThemeHt</a></u> | All
+                                    Rights Reserved</span>
+                            </div>
+                            <div class="col-lg-6 text-lg-end footer-list md-mt-2">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item mb-0"><a href="about-our-company.html">About Us</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="team.html">Team</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="contact.html">Contact Us</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="privacy-policy.html">Privacy Policy</a>
+                                    </li>
+                                    <li class="list-inline-item mb-0"><a href="terms-and-conditions.html">Terms</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!--footer end-->
+
+        <!--back-to-top start-->
+
+        <div class="scroll-top"><a class="smoothscroll" href="#top"><i class="flaticon-top"></i></a></div>
+
+        <!--back-to-top end-->
+
+        <!-- inject js start -->
+
+        <!--== jquery -->
+        <script src="js/theme.js"></script>
+
+        <!--== theme-plugin -->
+        <script src="js/theme-plugin.js"></script>
+
+        <!--== color-customize -->
+        <script src="js/color-customizer.js"></script>
+
+        <!--== theme-script -->
+        <script src="js/theme-script.js"></script>
+
+        <!-- inject js end -->
+
+    </div>
+    <!-- page wrapper end-->
+
+</body>
+
+</html>
